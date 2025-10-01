@@ -1,0 +1,124 @@
+/* Estilos Básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+header {
+    background-color: #008080; /* Cor Principal */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+    gap: 30px;
+}
+
+/* Estilos dos Cards */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-basis: 45%; /* Ocupa cerca de metade do container */
+    flex-grow: 1;
+}
+
+.login-section {
+    max-width: 400px;
+}
+
+/* Formulário */
+.card h2 {
+    color: #008080;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Botões */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-principal {
+    background-color: #FF5733; /* Laranja de Ação */
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.btn-secundario {
+    background-color: #008080;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.btn-principal:hover { background-color: #e04a29; }
+.btn-secundario:hover { background-color: #006666; }
+
+/* Dashboard do Aluno */
+.aluno-dashboard {
+    flex-basis: 100%; /* Ocupa a largura total */
+}
+
+.emprestimos-info, .reservas-info {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+.emprestimos-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.emprestimos-info th, .emprestimos-info td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.status-ok { color: green; font-weight: bold; }
+.status-alerta { color: #FFA500; font-weight: bold; } /* Amarelo/Laranja */
+.status-vencido { color: red; font-weight: bold; }
+
+.reservas-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reservas-info li {
+    background-color: #f9f9f9;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-left: 4px solid #FFD700;
+}
