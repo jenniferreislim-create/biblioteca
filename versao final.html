@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTEMA BIBLIOTECA</title>
+    
+    <link rel="stylesheet" href="estilobiblio.css">
+    <script type="text/javascript" src="arquivo.js">
+
+
+</script>
+
+    <style>
+        :root {
+            --cor-header: #66CDAA;
+            --cor-topnav: #B3B4AF;
+            --cor-link-hover: #B5C9CB;
+            --cor-texto-link: black;
+            --cor-fundo: #f4f4f4;
+            --cor-clara: #ffffff;
+            --cor-secundaria: #9D8E93;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: Arial, sans-serif; background-color: var(--cor-fundo); }
+        header { background: var(--cor-header); padding: 20px; text-align: center; }
+        header h1 { color: black; font-size: 2.5em; margin-bottom: 10px; text-align: center; }
+        #frmBusca { margin-bottom: 15px; display: flex; justify-content: center; gap: 10px; }
+        #frmBusca input[type="text"] { padding: 8px 15px; border: 1px solid #ccc; border-radius: 20px; width: 300px; }
+        #frmBusca input[type="submit"] { padding: 8px 15px; border: none; border-radius: 20px; background-color: var(--cor-secundaria); color: white; cursor: pointer; }
+        ul.topnav { display: flex; list-style-type: none; background-color: var(--cor-topnav); justify-content: center; }
+        ul.topnav li a { display: block; color: var(--cor-texto-link); padding: 14px 16px; text-decoration: none; font-weight: bold; transition: background-color 0.3s; }
+        ul.topnav li a:hover { background-color: var(--cor-link-hover); color: black; }
+        .container-3-colunas { display: flex; max-width: 1200px; margin: 20px auto; padding: 0 10px; gap: 20px; }
+        .coluna-lateral, .coluna-principal { padding: 20px; background-color: var(--cor-clara); border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .coluna-lateral { flex: 1; min-width: 220px; }
+        .coluna-principal { flex: 2; }
+        .servicos-rapidos { display: flex; flex-direction: column; gap: 10px; }
+        .servico-item { text-align: center; padding: 10px; border: 2px solid #ddd; border-radius: 8px; transition: transform 0.2s, background-color 0.2s; cursor: pointer; background-color: white; }
+        .servico-item:hover { transform: scale(1.03); background-color: var(--cor-link-hover); }
+        .servico-item .icone { font-size: 1.5em; margin-bottom: 5px; color: var(--cor-secundaria); }
+        .servico-item p { font-size: 1em; font-weight: bold; margin: 0; }
+        form p { margin: 10px 0; }
+        input[type="text"], select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; width: 90%; margin-top: 5px; }
+        input[type="submit"] { padding: 10px 15px; background-color: var(--cor-secundaria); color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 15px; }
+        @media (max-width: 768px) {
+            .container-3-colunas { flex-direction: column; }
+            .coluna-lateral, .coluna-principal { min-width: auto; width: 100%; }
+            ul.topnav { flex-wrap: wrap; }
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <form name="frmBusca" id="frmBusca" action="#" method="get">
+            <input type="text" placeholder="Digite aqui sua busca..."/>
+            <input type="submit" name="btnBuscar" value="Pesquisar"/>
+
+        </form>
+        <h1>BIBLIOTECA</h1>
+
+    </header>
+
+    <nav>
+        <ul class="topnav">
+            <li><a href="#">INÍCIO</a></li>
+            <li><a href="#">LIVROS</a></li>
+            <li><a href="#">RESERVA</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">ENDEREÇO</a></li>
+            <li><a href="#">HORÁRIO</a></li> </p> </p> </p>
+   <form name="frmBusca" id="frmBusca" action="#" method="get">
+            <input type="text" placeholder="Digite aqui sua busca..."/>
+            <input type="submit" name="btnBuscar" value="Pesquisar"/>
+
+        </form>
+        </ul>
+    </nav>
+
+    <div class="container-3-colunas">
+
+        <aside class="coluna-lateral">
+            <h2>🔗 Serviços Rápidos</h2>
+            <div class="servicos-rapidos">
+                <div class="servico-item"><span class="icone">👤</span><p>LOGIN</p></div>
+                <div class="servico-item"><span class="icone">📅</span><p>RESERVA</p></div>
+                <div class="servico-item"><span class="icone">📚</span><p>CATÁLOGO</p></div>
+                <div class="servico-item"><span class="icone">⭐</span><p>POPULARES</p></div>
+            </div>
+            <hr style="margin: 20px 0;">
+            <section id="localizacao-biblioteca">
+                <h2>📍 Endereço e Horários</h2>
+                <div class="info-biblioteca">
+                    <p><strong>Endereço:</strong> Rua Dr. Fernando Cruz, Nº 519, - Bairro São Manoel.</p>
+                    <p><strong>Horário:</strong> Segunda à Sexta (8h-18h)</p>
+                </div>
+            </section>
+        </aside>
+
+        <main class="coluna-principal">
+            <h1>👋 Bem-vindos à nossa Biblioteca</h1>
+            <img src="frase.png" alt="Frase inspiradora sobre leitura" style="max-width: 100%; height: auto; margin: 15px 0; border-radius: 5px;"/>	
+
+            <h2>Cadastro/Login</h2>
+            
+	<!-- formulário com id para rolagem -->
+            <form id="area-login" name="formLogin" action="#" method="post" onsubmit="return validar()">
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input name="nome" id="nome" type="text" required>
+                </p>
+                <p>
+                    <label for="serie">Série:</label>
+                    <select name="serie" id="serie" required>
+                        <option value="">Selecione a Série</option>
+                        <option value="6">6° Ano</option>
+                        <option value="7">7° Ano</option>
+                        <option value="8">8° Ano</option>
+                        <option value="9">9° Ano</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="turno">Turno:</label>
+                    <select name="turno" id="turno" required>
+                        <option value="">Selecione o Turno</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                        <option value="noite">Noite</option>
+                    </select>
+                </p>
+                <p>Sexo:
+                    <label style="margin-left: 10px;"><input type="radio" name="sexo" value="M" id="masc" required /> Masculino</label>
+                    <label><input type="radio" name="sexo" value="F" id="fem" /> Feminino</label>
+                </p>
+                <input type="submit" value="Entrar">
+            </form>
+
+            <p id="mensagemBoasVindas" style="font-weight:bold; margin-top:15px; color:green;"></p>
+        </main>
+
+        <aside class="coluna-lateral">
+            <h2>📰 Notícias e Destaques</h2>
+            <p><strong>Novo Horário de Atendimento:</strong> A biblioteca agora abre às 8h30. Confira!</p>
+            <p style="margin-top: 15px;">**Evento:** Roda de leitura com autor local na próxima terça-feira.</p>
+          
+	    <img border="2" width="250" height="300"
+src="livros.gif"
+name="imagem" 
+onmouseover="mouseOver()"
+onmouseout="mouseOut()" />
+        </aside>
+    </div>
+
+	<!-- JS para rolagem suave -->
+   <script>
+
+    document.querySelectorAll('.btn-login').forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#area-login').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
+
+    <script>
+    window.onload = function() {
+        const nome = document.getElementById("nome");
+        const serie = document.getElementById("serie");
+        const turno = document.getElementById("turno");
+        const masc = document.getElementById("masc");
+        const fem = document.getElementById("fem");
+
+        // Foco inicial no campo nome
+        nome.focus();
+
+        nome.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { event.preventDefault(); serie.focus(); }
+        });
+        serie.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { event.preventDefault(); turno.focus(); }
+        });
+        turno.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { event.preventDefault(); masc.focus(); }
+        });
+        masc.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { event.preventDefault(); document.getElementById("area-login").requestSubmit(); }
+        });
+        fem.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") { event.preventDefault(); document.getElementById("area-login").requestSubmit(); }
+        });
+    }
+
+    function validar() {
+        const nomeInput = document.getElementById("nome");
+        const nome = nomeInput.value.trim();
+        if (nome === "") {
+            alert("Por favor, digite seu nome corretamente.");
+            nomeInput.focus();
+            return false;
+        }
+        document.getElementById("mensagemBoasVindas").textContent = "Bem-vindo, " + nome + "!";
+        return false;
+    }
+    </script>
+
+</body>
+</html>
